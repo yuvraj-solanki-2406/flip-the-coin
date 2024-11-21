@@ -13,19 +13,19 @@ back.addEventListener("click", function () {
 function flipCoin() {
     flipSound.play();
     if (Math.random() > 0.5){
-        back.style.display = "flex";
-        front.style.display = "none";
-        back.classList.add("animation_rotate");
         setTimeout(() => {
             back.classList.remove("animation_rotate");
         }, 800);
+        back.style.display = "flex";
+        front.style.display = "none";
+        back.classList.add("animation_rotate");
     } else {
-        front.style.display = "flex";
-        back.style.display = "none";
-        front.classList.add("animation_rotate");
         setTimeout(() => {
             front.classList.remove("animation_rotate");
         }, 800);
+        front.style.display = "flex";
+        back.style.display = "none";
+        front.classList.add("animation_rotate");
     }
 
 }
